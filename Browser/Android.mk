@@ -6,7 +6,11 @@ LOCAL_CERTIFICATE := platform
 LOCAL_MULTILIB := both
 LOCAL_OVERRIDES_PACKAGES := Jelly
 
-LOCAL_SRC_FILES := arm64_ChromeModernPublic.apk
+ifeq ($(TARGET_CPU_ABI), arm64-v8a)
+	LOCAL_SRC_FILES := ChromeModernPublic_arm64.apk
+else
+	LOCAL_SRC_FILES := ChromeModernPublic_arm.apk
+endif
 
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
