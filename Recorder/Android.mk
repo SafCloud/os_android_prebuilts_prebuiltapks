@@ -4,7 +4,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := Recorder 
 LOCAL_CERTIFICATE := platform
 
-LOCAL_SRC_FILES := audiorecordere-unsigned.apk
+LOCAL_SRC_FILES := audioRecorder-unsigned.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 include $(BUILD_PREBUILT)
